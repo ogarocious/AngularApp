@@ -15,6 +15,17 @@ builder.Services.AddControllers(); // Enables API controllers
 builder.Services.AddEndpointsApiExplorer(); // For minimal API support
 builder.Services.AddSwaggerGen(); // Adds Swagger for API documentation (optional)
 
+// Add and configure CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Angular app URL
+              .AllowAnyMethod()                    // Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
+              .AllowAnyHeader();                   // Allow all HTTP headers
+    });
+});
+
 // Build the application
 var app = builder.Build();
 
@@ -30,6 +41,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting(); // Enables routing
 app.UseAuthorization(); // Handles authorization (optional if you're not using it)
+
+// Use the CORS policy
+app.UseCors("AllowAngularApp");
 
 // Map controllers
 app.MapControllers();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ogarocious/Documents/GitHub/FirstCSharpApp/MyFirstApp/MyFirstApp.csproj": {}
+    "/Users/ogarocious/Documents/GitHub/CtoAngularProject/backend-dotnet/MyFirstApp.csproj": {}
   },
   "projects": {
-    "/Users/ogarocious/Documents/GitHub/FirstCSharpApp/MyFirstApp/MyFirstApp.csproj": {
+    "/Users/ogarocious/Documents/GitHub/CtoAngularProject/backend-dotnet/MyFirstApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ogarocious/Documents/GitHub/FirstCSharpApp/MyFirstApp/MyFirstApp.csproj",
+        "projectUniqueName": "/Users/ogarocious/Documents/GitHub/CtoAngularProject/backend-dotnet/MyFirstApp.csproj",
         "projectName": "MyFirstApp",
-        "projectPath": "/Users/ogarocious/Documents/GitHub/FirstCSharpApp/MyFirstApp/MyFirstApp.csproj",
+        "projectPath": "/Users/ogarocious/Documents/GitHub/CtoAngularProject/backend-dotnet/MyFirstApp.csproj",
         "packagesPath": "/Users/ogarocious/.nuget/packages/",
-        "outputPath": "/Users/ogarocious/Documents/GitHub/FirstCSharpApp/MyFirstApp/obj/",
+        "outputPath": "/Users/ogarocious/Documents/GitHub/CtoAngularProject/backend-dotnet/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ogarocious/.nuget/NuGet/NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.0, )"
